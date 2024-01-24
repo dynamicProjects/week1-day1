@@ -83,3 +83,6 @@ input[type="submit"]{
     margin: 20px 0 10px 0;
     width: 100px;
 }
+main #album #photo img{
+    width: 400px;
+}
