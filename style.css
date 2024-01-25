@@ -86,3 +86,10 @@ input[type="submit"]{
 main #album #photo img{
     width: 400px;
 }
+#photo{
+    display: inline-block;
+    cursor: pointer;
+}
+.caption{
+    text-align: center;
+}
