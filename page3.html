@@ -31,10 +31,11 @@
                     <input type="radio" name="gender" value="female"/>Female
                    <label>How should we contact you?</label>
                    <select id="contactDropdown" onchange="ShowHideDiv()">
+                    <option value="email">Select Value</option>
                     <option value="email">Email</option>
                     <option value="phone">Phone</option>
                 </select>
-                    <div id="email">
+                    <div id="email" style="display: none">
                         <label>Enter your email</label>
                     <input type="email" name="email">
                     </div>

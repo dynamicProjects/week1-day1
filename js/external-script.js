@@ -44,7 +44,12 @@ function closeInfoBox(boxNumber) {
 function ShowHideDiv(){
     var selectedValue = document.getElementById("contactDropdown").value;
     var showPhone = document.getElementById("phone");
+    var showEmail = document.getElementById("email");
   if(selectedValue=='phone'){
     showPhone.style.display = "block";
+    showEmail.style.display = "none";
+  }else{
+    showEmail.style.display = "block";
+    showPhone.style.display = "none";
   }
   }
