@@ -93,3 +93,34 @@ main #album #photo img{
 .caption{
     text-align: center;
 }
+.info-box {
+    position: absolute;
+    top: 570px;
+    left: 480px;
+    /* width: 50%; */
+    height: 100%;
+    background-color: transparent; /* Semi-transparent background */
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999; /* Ensure the info-box is on top of other elements */
+}
+
+.info-content {
+    max-width: 400px;
+    padding: 144px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+.info-content .h2{
+    text-align: left;
+}
+
+.close-link {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
