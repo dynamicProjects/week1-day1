@@ -110,11 +110,12 @@ main #album #photo img{
 
 .info-content {
     max-width: 400px;
-    padding: 144px;
+    padding: 50px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 8px;
+    height: 157px;
 }
-.info-content .h2{
+.info-content h2{
     text-align: left;
 }
 

@@ -17,25 +17,26 @@ for(var i=0; i < 10; i++){
     imageList.push(image);
 }
 document.getElementById("album").innerHTML=imageList.join(" ");
-var titles = document.querySelectorAll('img[title]');
-titles.forEach(function(title) {
-title.addEventListener('click', function() {
-showInfoBox(title.getAttribute('title'));
-});
+var titles = document.querySelectorAll('img[title]',);
+titles.forEach(function (title, index) {
+    title.addEventListener('click', function () {
+        showInfoBox(title.getAttribute('title'),  captionTexts[index],index + 1, this.offsetLeft, this.offsetTop);
+    });
 });
 
-function showInfoBox(element) {
-var description = element;
-var infoBoxContent = `
-<div class="info-content">
-    <h2>Caption</h2>
-    <p>${description}</p>
-    <a class="close-link" onclick="closeInfoBox()">Click This To Close</a>
-</div>`;
-document.getElementById("infoBox").innerHTML = infoBoxContent;
-document.getElementById("infoBox").style.display = "flex";
+function showInfoBox(description, captionTexts, boxNumber, left, top) {
+    var infoBoxContent = `
+        <div class="info-box" id="infoBox${boxNumber}" style="left:${left}px; top:${top}px;">
+            <div class="info-content">
+                <h2>${captionTexts}</h2>
+                <p>${description}</p>
+                <a class="close-link" onclick="closeInfoBox(${boxNumber})">Click This To Close</a>
+            </div>
+        </div>`;
+    document.getElementById("infoBoxes").innerHTML += infoBoxContent;
+    document.getElementById(`infoBox${boxNumber}`).style.display = "flex";
 }
 
-function closeInfoBox() {
-document.getElementById("infoBox").style.display = "none";
+function closeInfoBox(boxNumber) {
+    document.getElementById(`infoBox${boxNumber}`).style.display = "none";
 }
