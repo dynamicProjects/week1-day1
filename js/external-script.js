@@ -40,3 +40,11 @@ function showInfoBox(description, captionTexts, boxNumber, left, top) {
 function closeInfoBox(boxNumber) {
     document.getElementById(`infoBox${boxNumber}`).style.display = "none";
 }
+// contact JS code
+function ShowHideDiv(){
+    var selectedValue = document.getElementById("contactDropdown").value;
+    var showPhone = document.getElementById("phone");
+  if(selectedValue=='phone'){
+    showPhone.style.display = "block";
+  }
+  }
